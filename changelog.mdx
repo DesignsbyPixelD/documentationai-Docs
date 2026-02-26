@@ -1,0 +1,104 @@
+---
+title: Changelog
+description: Track updates and improvements to The Great Awakening platform, highlighting recent changes to enhance your discipleship experience.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+Stay informed about the latest enhancements to The Great Awakening. We release updates regularly to deepen your discipleship journey, improve Scripture study tools, and strengthen community features.
+</Callout>
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added community forums for discussing Scripture and sharing testimonies in the `Belong` stage.
+- Introduced advanced Scripture search with keyword highlighting and cross-references.
+
+## Improvements
+
+- Enhanced mobile responsiveness for the `Rooted` course modules.
+- Optimized loading times for daily devotionals by `>30%`.
+
+## Bug Fixes
+
+- Fixed navigation issues in the `Multiply` discipleship path.
+- Resolved sharing glitches for personal growth journals.
+</Update>
+
+<Update label="2024-09-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+## New Features
+
+- Launched daily devotional emails integrated with your progress in the `Grow` stage.
+- Added progress tracking dashboards for the full Discipleship Journey.
+
+## Bug Fixes
+
+- Corrected audio playback errors in Bible reading plans.
+- Patched authentication issues during group study sessions.
+
+## Improvements
+
+- Updated UI with brand color `#2575FC` accents for better visual flow.
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["feature", "breaking"]}>
+## New Features
+
+- Introduced `Begin` module with interactive Gospel quizzes and salvation response guides.
+- Enabled group accountability features for `Belong` communities.
+
+## Breaking Changes
+
+- Updated API endpoints for journey progress; migrate using the new `/v1/journey` path.
+
+## Bug Fixes
+
+- Fixed profile sync delays across devices.
+</Update>
+
+## Update Summary
+
+<Columns cols={3}>
+  <Card title="Key Features" icon="star" href="#recent-updates">
+    Discover new tools like forums and devotionals that support steady spiritual growth.
+  </Card>
+  <Card title="Bug Fixes" icon="check-circle" href="#recent-updates">
+    Reliability improvements ensure uninterrupted access to Scripture and courses.
+  </Card>
+  <Card title="Platform Enhancements" icon="trending-up" href="#recent-updates">
+    Performance boosts and UI refinements make your journey smoother.
+  </Card>
+</Columns>
+
+## Stay Updated
+
+<Steps>
+  <Step title="Subscribe" icon="bell">
+    Enable notifications in your account settings to receive changelog emails.
+  </Step>
+  <Step title="Check Regularly" icon="refresh-cw">
+    Visit this page weekly for the latest `v1.x.x` releases.
+  </Step>
+  <Step title="Feedback" icon="message-circle">
+    Share suggestions via the feedback form to shape future updates.
+  </Step>
+</Steps>
+
+<Callout kind="tip" title="Upcoming Enhancements">
+Watch for v1.4.0 with live group Bible studies and AI-powered Scripture insights. Follow our progress on the [roadmap](/roadmap).
+</Callout>
+
+<Expandable title="Migration Guide for Breaking Changes" default-open="false">
+If you're integrating with our API, update your calls to use `https://api.thegreatawakening.com/v1/journey/progress`. Here's a quick example:
+
+````javascript
+// Old endpoint (deprecated)
+fetch('https://api.thegreatawakening.com/journey/progress')
+
+// New endpoint
+fetch('https://api.thegreatawakening.com/v1/journey/progress', {
+  headers: { Authorization: `Bearer ${YOUR_TOKEN}` }
+})
+````
+</Expandable>
